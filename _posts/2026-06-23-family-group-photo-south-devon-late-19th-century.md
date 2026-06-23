@@ -5,10 +5,10 @@ date: 2026-06-23
 categories: [歷史]
 tags: ["歷史影像", "老照片", "20世紀初", "愛德華時代", "戶外社交", "復古時尚"]
 era: "20世紀初 (約1900-1910年代)"
-image: "/assets/images/2026-06-23-family-group-photo-south-devon-late-19th-century.jpg"
+image: "/historysnaps-blog/assets/images/2026-06-23-family-group-photo-south-devon-late-19th-century.jpg"
 ---
 
-![Family group photo, South Devon, late 19th century](/assets/images/2026-06-23-family-group-photo-south-devon-late-19th-century.jpg)
+![photo](/historysnaps-blog/assets/images/2026-06-23-family-group-photo-south-devon-late-19th-century.jpg)
 
 **年代**：20世紀初 (約1900-1910年代)
 
