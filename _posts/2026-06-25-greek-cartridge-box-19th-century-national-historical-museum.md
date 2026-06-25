@@ -1,20 +1,20 @@
 ---
 layout: post
-title: "Greek cartridge box, 19th century , National Historical Museum"
+title: "Greek cartridge box, 19th century , National Historical Museum (47863)"
 date: 2026-06-25
 categories: [歷史]
-tags: ["歷史", "老照片", "文物", "雙頭鷹", "銀飾", "東歐歷史"]
-era: "19世紀末至20世紀初"
+tags: ["歷史", "老照片", "古董", "鼻煙盒", "歐洲藝術", "19世紀"]
+era: "19世紀中葉 (約1840-1870年代)"
 image: "/historysnaps-blog/assets/images/2026-06-25-greek-cartridge-box-19th-century-national-historical-museum.jpg"
 ---
 
-![Greek cartridge box, 19th century , National Historical Museum](/historysnaps-blog/assets/images/2026-06-25-greek-cartridge-box-19th-century-national-historical-museum.jpg)
+![Greek cartridge box, 19th century , National Historical Museum (47863)](/historysnaps-blog/assets/images/2026-06-25-greek-cartridge-box-19th-century-national-historical-museum.jpg)
 
-**年代**：19世紀末至20世紀初
+**年代**：19世紀中葉 (約1840-1870年代)
 
-**地點**：東歐或巴爾幹地區（可能與俄羅斯帝國或其文化影響有關）
+**地點**：歐洲
 
-這件精美的銀製文物，其中心浮雕的雙頭鷹圖案，是帝國權力與東正教傳承的強力象徵。從拜占庭帝國的餘暉，到俄羅斯帝國的輝煌，再到巴爾幹地區多個新生國家的紋章，雙頭鷹見證了數個世紀的興衰與變革。這件飾品可能曾是一位貴族、教會要員或富裕家庭的珍藏，用於盛裝貴重物品或作為儀式用品。它不只是一件工藝品，更是那個時代文化、政治與信仰交織的縮影，訴說著權力、信仰與民族認同的故事，將我們帶回那個波瀾壯闊的時代。
+這件華麗的鍍金金屬盒，彷彿穿越時光，帶我們回到19世紀中葉的歐洲。那是一個崇尚精緻與奢華的年代，即使是日常小物，也要講究藝術與匠心。這只盒子以繁複的浮雕工藝，雕刻出盛開的花卉、優雅的卷葉與中央盾形紋章般的圖案，每一處細節都閃耀著手工的溫度與時光的沉澱。它很可能是一個鼻煙盒，曾經被某位貴族或富商握在手中，在社交場合中優雅地取出，輕輕一彈，散發出上等的鼻煙香氣，同時也無聲地宣告著主人的品味與社會地位。這不僅是一個容器，更是一件藝術品，承載著那個時代的社會風尚與個人故事，訴說著百年前的奢華日常。
 
 ---
 
