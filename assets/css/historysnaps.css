@@ -1,0 +1,126 @@
+/* 歷史三兩事 — 首頁卡片樣式 */
+
+.hs-hero {
+  text-align: center;
+  padding: 2.5rem 1rem 2rem;
+  border-bottom: 1px solid #e0d8cc;
+  margin-bottom: 2rem;
+}
+
+.hs-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c2416;
+  margin: 0 0 0.3rem;
+  letter-spacing: 0.05em;
+}
+
+.hs-tagline {
+  font-size: 1rem;
+  color: #8b7355;
+  margin: 0 0 0.8rem;
+  font-style: italic;
+}
+
+.hs-intro {
+  font-size: 0.9rem;
+  color: #5a5040;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* 卡片格線：桌面 2 欄，手機 1 欄 */
+.hs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+}
+
+@media (max-width: 640px) {
+  .hs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 卡片 */
+.hs-card {
+  background: #faf8f4;
+  border: 1px solid #e8e0d0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.hs-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+/* 縮圖 */
+.hs-card-img-link {
+  display: block;
+  overflow: hidden;
+  background: #ede7db;
+  aspect-ratio: 4/3;
+}
+
+.hs-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.hs-card:hover .hs-card-img {
+  transform: scale(1.03);
+}
+
+/* 卡片內容 */
+.hs-card-body {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.hs-card-date {
+  display: block;
+  font-size: 0.75rem;
+  color: #9e8e76;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.05em;
+}
+
+.hs-card-era {
+  display: inline-block;
+  font-size: 0.72rem;
+  color: #7a6045;
+  background: #f0e8d8;
+  border-radius: 3px;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hs-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0.4rem 0 0.5rem;
+}
+
+.hs-card-title a {
+  color: #2c2416;
+  text-decoration: none;
+}
+
+.hs-card-title a:hover {
+  color: #8b5e2a;
+}
+
+.hs-card-excerpt {
+  font-size: 0.82rem;
+  color: #6b5d4a;
+  line-height: 1.6;
+  margin: 0;
+}

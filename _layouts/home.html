@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/historysnaps.css' | prepend: site.baseurl }}">
+
+<div class="hs-home">
+  <div class="hs-hero">
+    <h1 class="hs-title">{{ site.title }}</h1>
+    <p class="hs-tagline">{{ site.description }}</p>
+    <p class="hs-intro">每一張老照片，都是一個時代留下的切片。<br>透過歷史學者的眼光，帶你看見影像背後的故事。</p>
+  </div>
+
+  <div class="hs-grid">
+    {% for post in site.posts %}
+    {% unless post.url contains 'welcome' %}
+    <article class="hs-card">
+      {% if post.image %}
+      <a class="hs-card-img-link" href="{{ post.url | prepend: site.baseurl }}">
+        <img class="hs-card-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+      </a>
+      {% endif %}
+      <div class="hs-card-body">
+        <time class="hs-card-date">{{ post.date | date: "%Y · %m · %d" }}</time>
+        {% if post.era %}<span class="hs-card-era">{{ post.era }}</span>{% endif %}
+        <h2 class="hs-card-title">
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <p class="hs-card-excerpt">{{ post.excerpt | strip_html | truncate: 75 }}</p>
+      </div>
+    </article>
+    {% endunless %}
+    {% endfor %}
+  </div>
+</div>
