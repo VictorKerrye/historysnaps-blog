@@ -11,25 +11,63 @@ layout: default
     <p class="hs-intro">每一張老照片，都是一個時代留下的切片。<br>透過歷史學者的眼光，帶你看見影像背後的故事。</p>
   </div>
 
+  {% assign current_month = site.time | date: '%Y-%m' %}
+  {% assign current_month_display = site.time | date: '%Y/%m' %}
+
+  <div class="hs-month-header">
+    <span class="hs-month-label">{{ current_month_display }} 發表</span>
+  </div>
+
   <div class="hs-grid">
     {% for post in site.posts %}
-    {% unless post.url contains 'welcome' %}
-    <article class="hs-card">
-      {% if post.image %}
-      <a class="hs-card-img-link" href="{{ post.url | prepend: site.baseurl }}">
-        <img class="hs-card-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-      </a>
-      {% endif %}
-      <div class="hs-card-body">
-        <time class="hs-card-date">{{ post.date | date: "%Y · %m · %d" }}</time>
-        {% if post.era %}<span class="hs-card-era">{{ post.era }}</span>{% endif %}
-        <h2 class="hs-card-title">
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <p class="hs-card-excerpt">{{ post.excerpt | strip_html | truncate: 75 }}</p>
-      </div>
-    </article>
-    {% endunless %}
+      {% unless post.url contains 'welcome' %}
+        {% assign pm = post.date | date: '%Y-%m' %}
+        {% if pm == current_month %}
+        <article class="hs-card">
+          {% if post.image %}
+          <a class="hs-card-img-link" href="{{ post.url | prepend: site.baseurl }}">
+            <img class="hs-card-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+          </a>
+          {% endif %}
+          <div class="hs-card-body">
+            <time class="hs-card-date">{{ post.date | date: "%Y · %m · %d" }}</time>
+            {% if post.era %}<span class="hs-card-era">{{ post.era }}</span>{% endif %}
+            <h2 class="hs-card-title">
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <p class="hs-card-excerpt">{{ post.excerpt | strip_html | truncate: 75 }}</p>
+          </div>
+        </article>
+        {% endif %}
+      {% endunless %}
     {% endfor %}
   </div>
+
+  {% assign prev_month = "" %}
+  {% assign prev_month_display = "" %}
+  {% for post in site.posts %}
+    {% unless post.url contains 'welcome' %}
+      {% assign pm = post.date | date: '%Y-%m' %}
+      {% if pm != current_month and prev_month == "" %}
+        {% assign prev_month = pm %}
+        {% assign prev_month_display = post.date | date: '%Y/%m' %}
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+
+  <div class="hs-home-nav">
+    {% if prev_month != "" %}
+    <a class="hs-nav-card" href="{{ '/archive/' | prepend: site.baseurl }}#{{ prev_month }}">
+      <span class="hs-nav-icon">←</span>
+      <span class="hs-nav-label">{{ prev_month_display }}</span>
+      <span class="hs-nav-sub">上個月</span>
+    </a>
+    {% endif %}
+    <a class="hs-nav-card" href="{{ '/archive/' | prepend: site.baseurl }}">
+      <span class="hs-nav-icon">≡</span>
+      <span class="hs-nav-label">總覽</span>
+      <span class="hs-nav-sub">所有月份</span>
+    </a>
+  </div>
+
 </div>

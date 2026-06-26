@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/historysnaps.css' | prepend: site.baseurl }}">
+
+<div class="hs-home">
+  <div class="hs-hero">
+    <h1 class="hs-title">文章總覽</h1>
+    <p class="hs-tagline">按月份瀏覽所有歷史照片故事</p>
+  </div>
+
+  {% assign seen_months = "" %}
+  {% for post in site.posts %}
+    {% unless post.url contains 'welcome' %}
+      {% assign pm = post.date | date: '%Y-%m' %}
+      {% unless seen_months contains pm %}
+        {% assign seen_months = seen_months | append: pm | append: "," %}
+      {% endunless %}
+    {% endunless %}
+  {% endfor %}
+  {% assign month_list = seen_months | split: "," %}
+
+  {% for month in month_list %}
+    {% if month != "" %}
+    {% assign month_display = month | replace: '-', '/' %}
+    <section class="hs-month-section" id="{{ month }}">
+      <div class="hs-month-header">
+        <span class="hs-month-label">{{ month_display }} 發表</span>
+      </div>
+      <div class="hs-grid">
+        {% for post in site.posts %}
+          {% unless post.url contains 'welcome' %}
+            {% assign pm = post.date | date: '%Y-%m' %}
+            {% if pm == month %}
+            <article class="hs-card">
+              {% if post.image %}
+              <a class="hs-card-img-link" href="{{ post.url | prepend: site.baseurl }}">
+                <img class="hs-card-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+              </a>
+              {% endif %}
+              <div class="hs-card-body">
+                <time class="hs-card-date">{{ post.date | date: "%Y · %m · %d" }}</time>
+                {% if post.era %}<span class="hs-card-era">{{ post.era }}</span>{% endif %}
+                <h2 class="hs-card-title">
+                  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+                <p class="hs-card-excerpt">{{ post.excerpt | strip_html | truncate: 75 }}</p>
+              </div>
+            </article>
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  {% endfor %}
+
+</div>
